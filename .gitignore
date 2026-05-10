@@ -1,3 +1,7 @@
+# Custom
+config.ts
+dist/
+
 # Logs
 logs
 *.log
