@@ -3,19 +3,19 @@ import config from "./config.ts";
 import Logger from "./Logger.ts";
 
 if (!config.TOKEN) {
-  throw new Error("BOT_TOKEN manquant dans le fichier .env");
+  throw new Error("BOT_TOKEN missing from the .env file");
 }
 
 const client = new Client();
 
 client.once("ready", async () => {
   if (!client.user) {
-    throw new Error("Client non connecté");
+    throw new Error("Client not logged in");
   }
   Logger.info(`Logged in as ${client.user.username}!`);
 
   await client.user.edit({
-    status: { presence: "Online", text: "Grandit avec Slownover" },
+    status: { presence: "Online", text: "Grew up with Slownover" },
   });
 });
 
