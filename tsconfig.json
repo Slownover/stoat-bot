@@ -43,5 +43,5 @@
     "rewriteRelativeImportExtensions": true
   },
   "exclude": ["./min/", "./dist/"],
-  "include": ["./src/"]
+  "include": ["./src/", "./types/"]
 }
