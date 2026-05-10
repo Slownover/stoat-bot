@@ -1,5 +1,6 @@
 import { Client } from "stoat.js";
 import config from "./config.ts";
+import Logger from "./Logger.ts";
 
 if (!config.TOKEN) {
   throw new Error("BOT_TOKEN manquant dans le fichier .env");
@@ -11,7 +12,7 @@ client.once("ready", async () => {
   if (!client.user) {
     throw new Error("Client non connecté");
   }
-  console.info(`Logged in as ${client.user.username}!`);
+  Logger.info(`Logged in as ${client.user.username}!`);
 
   await client.user.edit({
     status: { presence: "Online", text: "Grandit avec Slownover" },
