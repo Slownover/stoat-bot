@@ -1,6 +1,6 @@
 import { Client } from "stoat.js";
 import config from "./config.ts";
-import Logger from "./Logger.ts";
+import Logger from "./utils/Logger.ts";
 
 if (!config.TOKEN) {
   throw new Error("BOT_TOKEN missing from the .env file");

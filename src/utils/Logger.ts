@@ -1,5 +1,5 @@
+import config from "../config.ts";
 import pino from "pino";
-import config from "./config.ts";
 
 const isDev = config.NODE_ENV !== "production";
 
